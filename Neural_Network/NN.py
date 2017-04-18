@@ -83,11 +83,13 @@ def test(x):
     l1 = sigmoid(np.dot(l0, W1))
     a = softmax(np.dot(l1, W2))
     for a in np.argmax(a, axis = 1):
-        print a+1
+        print (a+1)
 test(inputs2)
-
 
 inp_test = np.genfromtxt('test_data.csv', delimiter=',')
 inp_test = np.concatenate((inp_test, np.ones((len(inp_test), 1))), axis = 1)
+#inp_test.shape
 test(inp_test)
+
+
 
