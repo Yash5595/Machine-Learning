@@ -59,8 +59,8 @@ def train():
         #200 iterations
         for i in range (0, 200):
             l0 = inp_train
-            l1 = sigmoid(np.dot(l0,w1))
-            l2 = softmax(np.dot(l1,w2))
+            l1 = sigmoid(np.dot(l0,W1))
+            l2 = softmax(np.dot(l1,W2))
             
             #calculating error in layer 2
             l2_error = b - l2
